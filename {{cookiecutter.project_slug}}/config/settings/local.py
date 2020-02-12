@@ -35,5 +35,8 @@ INSTALLED_APPS += ['django_extensions']  # noqa F405
 
 # django CROS
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200", # angular
+    "http://localhost:4200",  # angular
 ]
+
+# drf yasg
+INSTALLED_APPS += ['drf_yasg']
