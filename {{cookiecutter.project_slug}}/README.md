@@ -1,6 +1,5 @@
 <p align="center">
-    <img src="https://miro.medium.com/max/400/1*nP2C50GK4_-ly_R_mq3juQ.png" width="120" alt="GraphQl" />
-    <img src="https://seeklogo.com/images/N/nestjs-logo-09342F76C0-seeklogo.com.png" width="120" alt="NestJs" />
+    <img src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" width="120" alt="Django" />
     </p>
 
 

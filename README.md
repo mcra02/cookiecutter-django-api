@@ -1,6 +1,6 @@
 <p align="center">
-    <img src="https://dashboard.snapcraft.io/site_media/appmedia/2020/04/cookiecutter-logo-square-512.png" width="120" alt="NestJs" />
-    <img src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" width="120" alt="GraphQl" />
+    <img src="https://dashboard.snapcraft.io/site_media/appmedia/2020/04/cookiecutter-logo-square-512.png" width="120" alt="Cookiecutter" />
+    <img src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" width="120" alt="Django" />
     </p>
 
 
