@@ -91,4 +91,4 @@ This project has using the following features:
 
 # Authors
 
-#### {{cookiecutter.author}}
+#### {{cookiecutter.author_name}}
