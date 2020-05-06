@@ -1,66 +1,76 @@
-# Django Api Cookiecutter
+<p align="center">
+    <img src="https://dashboard.snapcraft.io/site_media/appmedia/2020/04/cookiecutter-logo-square-512.png" width="120" alt="NestJs" />
+    <img src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" width="120" alt="GraphQl" />
+    </p>
 
-Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter) and inspired by [Pydanny's cookiecutter](https://github.com/pydanny/cookiecutter-django) and [Cride-platzi](https://github.com/pablotrinidad/cride-platzi) and [Gian Franco Lombardo](https://github.com/gianfrancolombardo/cookiecutter-django-api) and with the goal of optimize our development processes, we are happy to introduce our Django projects boilerplate packed and ready to use with the following features:
+
+<h1 align="center">
+  Django Api Cookiecutter
+</h1>
+
+Powered by [Maicol](https://github.com/mcra02) with the goal of optimize our development processes, we are happy to introduce our Django projects boilerplate packed and ready to use with the following features:
 
 - **Python** 3.8
-- **Django** 3.0.x
-- **Django REST Framework** 3.9.1
-- **DRF Yasg Open Api** 2.0
+- **Django** 3.0.6
+- **Django REST Framework** 3.11.0
 - [**12 Factor**](https://12factor.net/) based settings
 - **PostgreSQL** as database engine
 - **Docker** as container engine
-- Optimized development and production settings
-- **User app** Comes with custom user app ready to go with [**JWT**](https://jwt.io/)
-- **Extra** app for example
 - Run tests with unittest or pytest
-- **Flake8** for Style Guide Enforcement
+- **django-allauth** 0.41.0
 
 ## Installation
 
 1. First, get [Cookiecutter](https://github.com/audreyr/cookiecutter). Trust me, it's awesome:
 
-```
-$ pip install cookiecutter
-```
+    ```bash
+    $ pip install cookiecutter
+    ```
 
 2. Run against this repo
 
-```
-$ cookiecutter https://github.com/mcra02/cookiecutter-django-api.git
-```
+    ```bash
+    $ cookiecutter https://github.com/mcra02/cookiecutter-django-api.git
+    ```
 
-You'll be prompted for some values. Provide them, then a Django project will be created for you.
+    You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
 3. Enter the project and take a look around:
 
-```
-$ cd reddit/
-$ ls
-```
+    ```bash
+    $ cd project/
+    $ ls
+    ``` 
 
 ## Development
 
-To start working on this project I highly recommend you to check
-[pydanny's](https://github.com/pydanny) [Django Cookiecutter](https://github.com/pydanny/cookiecutter-django) [documentation](https://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html) on how to get this project up and running locally. If you don't want to do so, just run:
+1. Migration generated
+    ```bash
+    $ python manage.py makemigrations
+    ```
 
-```bash
-$ docker-compose -f local.yml up --build
-```
+2. Migration database
+    ```bash
+    $ python manage.py migrate
+    ```
 
-## Extra
+2. Run development
+    ```bash
+    $ python manage.py runserver 0.0.0.0:8000
+    ```
 
-This project provides a **simple application** that is responsible for the CRUD of a particular object (_Post_ in this case). It also meets the REST API patterns.
+## Production
 
-Routes:
+1. Build dockerfile
+    ```bash
+    $ docker build -t "project_name" .
+    ```
 
-```
-GET     /post       List
-POST    /post       Create
-GET     /post/123   Retrieve
-PUT     /post/123   Update
-DELETE  /post/123   Delete
-PATCH   /post/123   Partial update
-```
+2. Migration database
+    ```bash
+    $ docker run -itd --name backend-osffni -p 3000:8000 project_name
+    ```
+
 
 ## Contributing
 

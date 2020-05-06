@@ -1,8 +1,12 @@
 {
   "project_name": "Project 01",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+  "description": "My awesome project!",
   "author_name": "MaicolRodrigo",
+  "git_repository": "https://github.com/{{cookiecutter.author_name}}/{{cookiecutter.project_slug}}",
   "timezone": "America/Lima",
+  "db_host": "localhost",
+  "db_port": "5432",
   "db_name": "postgres",
   "db_user": "postgres",
   "db_password": "admin",

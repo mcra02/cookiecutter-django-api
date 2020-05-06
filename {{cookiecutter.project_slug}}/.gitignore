@@ -65,8 +65,10 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
+# sqlite
+db.sqlite*
+
 # Environments
-.venv
 venv/
 ENV/
 
