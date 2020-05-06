@@ -33,10 +33,8 @@ EMAIL_PORT = 1025
 # django-extensions
 INSTALLED_APPS += ['django_extensions']  # noqa F405
 
-# django CROS
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200",  # angular
-]
+# django CORS
+CORS_ORIGIN_ALLOW_ALL = True
 
 # drf yasg
 INSTALLED_APPS += ['drf_yasg']

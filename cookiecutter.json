@@ -2,5 +2,10 @@
   "project_name": "Project 01",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
   "author_name": "MaicolRodrigo",
+  "timezone": "America/Lima",
+  "db_name": "postgres",
+  "db_user": "postgres",
+  "db_password": "admin",
+  "db_shemas":"public",
   "open_source_license": ["MIT", "BSD", "GPLv3", "Not open source"]
 }

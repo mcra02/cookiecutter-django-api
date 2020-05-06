@@ -1,22 +1,32 @@
 """Base settings to build other settings files upon."""
+from pathlib import Path
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3
-APPS_DIR = ROOT_DIR.path('{{cookiecutter.project_slug}}')
+# ROOT_DIR = environ.Path(__file__) - 3
+ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+APPS_DIR = ROOT_DIR / "{{ cookiecutter.project_slug }}"
+# APPS_DIR = ROOT_DIR.path('{{cookiecutter.project_slug}}')
 
 env = environ.Env()
+
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+if READ_DOT_ENV_FILE:
+    # OS environment variables take precedence over variables from .env
+    env.read_env(str(ROOT_DIR / ".env"))
 
 # Base
 DEBUG = env.bool('DJANGO_DEBUG', False)
 
 # Language and timezone
-TIME_ZONE = 'Europe/Madrid'
+TIME_ZONE = "{{ cookiecutter.timezone }}"
 LANGUAGE_CODE = 'es'
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
+LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 
 # DATABASES
 DATABASES = {
@@ -36,6 +46,7 @@ DJANGO_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    "django.contrib.sites",
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
