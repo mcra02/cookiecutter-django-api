@@ -1,0 +1,8 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST={{cookiecutter.db_host}}
+POSTGRES_PORT={{cookiecutter.db_port}}
+POSTGRES_DB={{cookiecutter.db_name}}
+POSTGRES_USER={{cookiecutter.db_user}}
+POSTGRES_PASSWORD={{cookiecutter.db_password}}
+POSTGRES_OPTIONS=-c search_path={{cookiecutter.db_shemas}}
