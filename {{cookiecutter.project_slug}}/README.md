@@ -41,28 +41,34 @@ This project has using the following features:
 3. Install dependencies
 
    ```bash
+   $ virtualenv -p python3 venv
+   ```
+
+4. Install dependencies
+
+   ```bash
    $ pip install -r requeriments/local.txt
    ```
 
-4. Run save migrations
+5. Run save migrations
 
    ```bash
    $ python manage.py makemigrations
    ```
 
-5. Run up migrations
+6. Run up migrations
 
    ```bash
    $ python manage.py migrate
    ```
 
-6. Run service (dev)
+7. Run service (dev)
 
    ```bash
    $ python manage.py runserver 0.0.0.0:8000
    ```
 
-7. Open http://localhost:8000/
+8. Open http://localhost:8000/
 
 ### Production
 
@@ -85,7 +91,7 @@ This project has using the following features:
 3. Start project
 
    ```bash
-   $ docker run -itd --name backend-osffni -p 3000:8000 {{cookiecutter.project_slug}}
+   $ docker run -itd --name {{cookiecutter.project_slug}} -p 3000:8000 {{cookiecutter.project_slug}}
    ```
 4. Open http://localhost:3000/
 
