@@ -3,7 +3,7 @@
 Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter) and inspired by [Pydanny's cookiecutter](https://github.com/pydanny/cookiecutter-django) and [Cride-platzi](https://github.com/pablotrinidad/cride-platzi) and [Gian Franco Lombardo](https://github.com/gianfrancolombardo/cookiecutter-django-api) and with the goal of optimize our development processes, we are happy to introduce our Django projects boilerplate packed and ready to use with the following features:
 
 - **Python** 3.8
-- **Django** 3.2
+- **Django** 3.0.x
 - **Django REST Framework** 3.9.1
 - **DRF Yasg Open Api** 2.0
 - [**12 Factor**](https://12factor.net/) based settings

@@ -19,6 +19,9 @@ services:
       - "8000:8000"
     command: /start
 
+  redis:
+    image: redis
+
   celeryworker:
     <<: *django
     image: {{cookiecutter.project_slug}}_local_celeryworker
